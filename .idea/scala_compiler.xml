@@ -4,7 +4,7 @@
     <profile name="Maven 1" modules="salesfloor">
       <parameters>
         <parameter value="-dependencyfile" />
-        <parameter value="D:\workspace\salesfloor\target/.scala_dependencies" />
+        <parameter value="D:\workspace\interview\salesfloor\target/.scala_dependencies" />
       </parameters>
     </profile>
   </component>

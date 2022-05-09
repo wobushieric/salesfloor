@@ -17,7 +17,6 @@ class HttpHackerNewsService extends HackerNews with SprayJsonSupport {
   implicit val storyFormat = jsonFormat4(HackerNewsModel.Story)
   implicit val commentFormat = jsonFormat3(HackerNewsModel.Comment)
   val hackerNewsHost = "https://hacker-news.firebaseio.com"
-  val connection = Http().cachedHostConnectionPool[Int](hackerNewsHost, 4000)
 
   override def getTopStories(): Future[Seq[Int]] = {
     val responseFuture = Http().singleRequest(HttpRequest(uri = s"$hackerNewsHost/v0/topstories.json"))
